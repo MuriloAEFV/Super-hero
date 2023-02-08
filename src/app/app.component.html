@@ -1,6 +1,13 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search Hero</mat-label>
+    <input matInput placeholder="Ex. Superman" [formControl]="searchInput">
+  </mat-form-field>
+  <button type="button" mat-raised-button color="primary" (click)="searchHero()">Search</button>
+</form>
+
 <div class="container">
   <div *ngFor="let hero of heroes">
     <hero-card *ngIf="heroes.length" [heroName]="hero.name" [heroImage]="hero.image.url"></hero-card>
   </div>
 </div>
-
