@@ -1,17 +1,6 @@
 <div class="container">
-  <mat-card class="card-hero">
-    <mat-card-title>Batman</mat-card-title>
-    <img mat-card-image src="https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg" class="image-hero">
-  </mat-card>
-  
-  <mat-card class="card-hero">
-    <mat-card-title>Batman I</mat-card-title>
-    <img mat-card-image src="https://www.superherodb.com/pictures2/portraits/10/100/639.jpg" class="image-hero">
-  </mat-card>
-  
-  <mat-card class="card-hero">
-    <mat-card-title>Batman II</mat-card-title>
-    <img mat-card-image src="https://www.superherodb.com/pictures2/portraits/10/100/1496.jpg" class="image-hero">
-  </mat-card>
+  <div *ngFor="let hero of heroes">
+    <hero-card *ngIf="heroes.length" [heroName]="hero.name" [heroImage]="hero.image.url"></hero-card>
+  </div>
 </div>
 

@@ -7,13 +7,14 @@ import { HeroService } from './hero.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  heroes: any;
+  heroes: Array<any> = [];
 
   constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {
     this.heroService.getHero().subscribe((response) => {
       this.heroes = response.results;
+      console.log(this.heroes);
     });
   }
 }
