@@ -8,7 +8,11 @@ import { Observable } from 'rxjs';
 export class HeroService {
   constructor(private http: HttpClient) {}
 
-  public getHeroes(name: string): Observable<any> {
+  public getHeroesByName(name: string): Observable<any> {
     return this.http.get(`https://www.superheroapi.com/api.php/3365683880413232/search/${name}`)
+  }
+
+  public getHeroesById(id: string): Observable<any> {
+    return this.http.get(`https://www.superheroapi.com/api.php/3365683880413232/${id}`)
   }
 }
