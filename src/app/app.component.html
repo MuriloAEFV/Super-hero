@@ -1,19 +1,20 @@
 <form class="main-form">
-  <mat-form-field>
-    <mat-label>Search Hero by NAME</mat-label>
-    <input matInput placeholder="Ex. Superman" [formControl]="searchByName">
-  </mat-form-field>
+  <div class="input-field">
+    <label class="label">Search Hero by NAME</label>
+    <input class="input" placeholder="Ex. Superman" [formControl]="searchByName">
+  </div>
   <button class="btn-search" type="button" mat-raised-button color="primary" (click)="searchHeroByName()">Search</button>
-  <mat-form-field>
-    <mat-label>Search Hero by ID</mat-label>
-    <input matInput placeholder="47" [formControl]="searchById">
-  </mat-form-field>
+  <div class="input-field">
+    <label class="label">Search Hero by ID</label>
+    <input class="input" placeholder="47" [formControl]="searchById">
+  </div>
   <button class="btn-search" type="button" mat-raised-button color="primary" (click)="searchHeroById()">Search</button>
 
+  <span *ngIf="heroes.length && heroes[0].error"> {{ heroes[0].error }} </span>
 </form>
 
-<div class="container" *ngIf="heroes.length">
+<div class="container" *ngIf="heroes.length && !heroes[0].error"> 
   <div *ngFor="let hero of heroes">
-    <hero-card [heroName]="hero.name" [heroImage]="hero.image.url"></hero-card>
+    <hero-card [heroName]="hero.name" [heroImage]="hero.image.url" [powerStatus]="hero.powerstats"></hero-card>
   </div>
 </div>

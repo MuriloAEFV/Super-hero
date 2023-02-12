@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class HeroCardComponent {
   @Input() heroName: string = '';
   @Input() heroImage: string = '';
+  @Input() powerStatus: object = {};
 }

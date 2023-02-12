@@ -30,7 +30,11 @@ export class AppComponent {
 
   private getByName(name: string): void {
     this.heroService.getHeroesByName(name).subscribe((response) => {
-      this.heroes = response.results;
+      if (response.results) {
+        this.heroes = response.results;
+      } else {
+        this.heroes = response;
+      }
     });
   }
 
