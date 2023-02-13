@@ -1,12 +1,13 @@
 <mat-card class="card-hero">
   <mat-card-title>{{ heroName }}</mat-card-title>
+  <mat-card-subtitle class="name-real">{{ fullName }} : <span>Peso: {{ heroPeso[1] }}</span></mat-card-subtitle>
   <img mat-card-image [src]="heroImage" class="image-hero">
-  <ul class="list">
-    <li>Combat:</li>
-    <li>Durability:</li>
-    <li>Intelligence:</li>
-    <li>Power:</li>
-    <li>Speed:</li>
-    <li>Strenght:</li>
-  </ul>
+  <div *ngIf="powerStatus" class="list">
+    <span class="status">Combat: <span class="status-result"> {{ powerStatus.combat }} </span></span>
+    <span class="status">Durability: <span class="status-result"> {{ powerStatus.durability }} </span></span>
+    <span class="status">Intelligence: <span class="status-result"> {{ powerStatus.intelligence }}</span></span>
+    <span class="status">Power: <span class="status-result"> {{ powerStatus.power }} </span></span>
+    <span class="status">Speed: <span class="status-result"> {{ powerStatus.speed }} </span></span>
+    <span class="status">Strenght: <span class="status-result"> {{ powerStatus.strength }} </span></span>
+  </div>
 </mat-card>
