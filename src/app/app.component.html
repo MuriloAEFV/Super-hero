@@ -1,20 +1,47 @@
 <form class="main-form">
   <div class="input-field">
     <label class="label">Search Hero by NAME</label>
-    <input class="input" placeholder="Ex. Superman" [formControl]="searchByName">
+    <input
+      class="input"
+      placeholder="Ex. Superman"
+      [formControl]="searchByName"
+    />
   </div>
-  <button class="btn-search" type="button" mat-raised-button color="primary" (click)="searchHeroByName()">Search</button>
+  <button
+    class="btn-search"
+    type="button"
+    mat-raised-button
+    color="primary"
+    (click)="searchHeroByName()"
+  >
+    Search
+  </button>
   <div class="input-field">
     <label class="label">Search Hero by ID</label>
-    <input class="input" placeholder="47" [formControl]="searchById">
+    <input class="input" placeholder="47" [formControl]="searchById" />
   </div>
-  <button class="btn-search" type="button" mat-raised-button color="primary" (click)="searchHeroById()">Search</button>
+  <button
+    class="btn-search"
+    type="button"
+    mat-raised-button
+    color="primary"
+    (click)="searchHeroById()"
+  >
+    Search
+  </button>
 
   <span *ngIf="heroes.length && heroes[0].error"> {{ heroes[0].error }} </span>
 </form>
 
-<div class="container" *ngIf="heroes.length && !heroes[0].error"> 
+<div class="container" *ngIf="heroes.length && !heroes[0].error">
   <div *ngFor="let hero of heroes">
-    <hero-card [heroName]="hero.name" [heroImage]="hero.image.url" [powerStatus]="hero.powerstats" [fullName]="hero.biography['full-name']" [heroPeso]="hero.appearance.weight"></hero-card>
+    <hero-card
+      (click)="openDialog(hero)"
+      [heroName]="hero.name"
+      [heroImage]="hero.image.url"
+      [powerStatus]="hero.powerstats"
+      [fullName]="hero.biography['full-name']"
+      [heroPeso]="hero.appearance.weight"
+    ></hero-card>
   </div>
 </div>

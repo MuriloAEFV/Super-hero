@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'hero-card',
