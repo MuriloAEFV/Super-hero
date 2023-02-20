@@ -1,11 +1,45 @@
 <div class="hero-dialog">
 
   <div class="left-side">
-
+    <img [src]="heroData.image.url" class="image-hero">
+    <div class="hero-stats">
+      <span class="stats">Combat: <span class="result"> {{ heroData.powerstats.combat }} </span></span>
+      <span class="stats">Durability: <span class="result"> {{ heroData.powerstats.durability }} </span></span>
+      <span class="stats">Intelligence: <span class="result"> {{ heroData.powerstats.intelligence }}</span></span>
+      <span class="stats">Power: <span class="result"> {{ heroData.powerstats.power }} </span></span>
+      <span class="stats">Speed: <span class="result"> {{ heroData.powerstats.speed }} </span></span>
+      <span class="stats">Strenght: <span class="result"> {{ heroData.powerstats.strength }} </span></span>
+    </div>
   </div>
 
   <div class="right-side">
-    
-  </div>
+    <div class="title-header">
+      <span class="title"> {{ heroData.name }} </span>
+      <span class="subtitle"> {{ heroData.biography.publisher }} </span>
+    </div>
 
+<div class="hero-info">
+    <div class="name-hero">
+      <span class="info"> Name:</span> <span class="valor">{{ heroData.biography['full-name'] }}</span>
+      </div>
+      <div class="race-place-birth">
+        <span class="info"> Race: </span> <span class="valor">{{ heroData.appearance.race }} </span>
+        <span class="info"> Place of Birth: </span> <span class="valor">{{ heroData.biography['place-of-birth'] }}</span>
+      </div>
+      <div class="height-weight">
+        <span class="info"> Height: </span> <span class="valor"> {{ heroData.appearance.height[1] }} </span>
+        <span class="info"> Weight: </span> <span class="valor"> {{ heroData.appearance.weight[1] }} </span>
+      </div>
+      <div class="current-work">
+        <span class="info"> Current work:</span> <span class="valor"> {{ heroData.work.occupation }} </span>
+        <span class="info"> Base: </span> <span class="valor"> {{ heroData.work.base }} </span>
+      </div>
+      <div class="other-names">
+        <span class="info"> Other names:</span> <span class="valor"> {{ heroData.biography.aliases }} </span>
+      </div>
+      <div class="id-number">
+        <span class="info"> ID:</span> <span class="valor"> {{ heroData.id }}</span>
+      </div>
+    </div>
+  </div>
 </div>

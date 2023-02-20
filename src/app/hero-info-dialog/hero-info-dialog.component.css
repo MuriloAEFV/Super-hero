@@ -1,13 +1,110 @@
 .hero-dialog {
-  margin: 20px 10px;
   display: flex;
   align-items: center;
-  height: 500px;
-  width: 500px;
+  height: 528px;
+  width: 736px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .left-side {
   display: flex;
   flex-direction: column;
-} 
+  width: 29%;
+  height: 108%;
+  margin: -10px;
+  background-color: grey;
+}
 
+.image-hero {
+  margin-top: 6px;
+  margin-left: 6px;
+  width: 210px;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+.stats {
+  display: flex;
+  font-weight: bold;
+  margin-left: 16px;
+  margin-top: 16px;
+  font-size: 19px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: rgb(148, 8, 8);
+}
+
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 303px;
+}
+.right-side {
+  display: flex;
+  flex-direction: column;
+  width: 74%;
+  height: 108%;
+  background-color: grey;
+}
+
+.title {
+  font: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 54px;
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(133, 5, 5);
+  font-size: 20px;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-left: 45px;
+}
+
+.info {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 7px;
+}
+
+.valor {
+  display: flex;
+  color: rgb(133, 5, 5);
+  font-size: 23px;
+  margin: 7px;
+}
+
+.name-hero {
+  display: flex;
+}
+
+.race-place-birth {
+  display: flex;
+}
+
+.height-weight {
+  display: flex;
+}
+
+.id-number {
+  display: flex;
+  position: absolute;
+  bottom: -10px;
+  right: 3px;
+}
